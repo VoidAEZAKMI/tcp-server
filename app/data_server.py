@@ -16,5 +16,5 @@ with socket(AF_INET, SOCK_STREAM) as server_sock:
         for client_socket in client_sockets:
             data = client_socket.recv(4096)
             print(f"Message: {data.decode('utf-8')} was sent by the client {address}")
-            MSG = 'Hi client!'
+            MSG = ('Hi friend client')
             client_socket.send(MSG.encode('utf-8'))
